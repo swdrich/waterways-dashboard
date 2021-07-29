@@ -3,3 +3,17 @@
     background-color: rgb(0, 117, 193);
     font-family: Quicksand, sans-serif;
 }
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+    background-blend-mode: screen;
+}
+    
+#map,
+body,
+html {
+    height: 100%;
+}
+  

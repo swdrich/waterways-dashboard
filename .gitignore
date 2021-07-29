@@ -1,6 +1,7 @@
 # App specific files
 Waterways.txt
 HostingToHeroku.docx
+config.js
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

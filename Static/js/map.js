@@ -1,5 +1,20 @@
-var map = L.map('map').setView([42.087900, -85.830370], 13);
+console.log("map.js is loaded")
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+// Creating map object
+// Center on Cedar Lake, Porter Twnshp, MI
+
+var myMap = L.map("map", {
+    center: [42.089542, -85.831121],
+    zoom: 15
+  });
+
+// Add tile layer
+
+L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
+attribution: "© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>",
+tileSize: 512,
+maxZoom: 18,
+zoomOffset: -1,
+id: "mapbox/satellite-v9",
+accessToken: accessToken
+}).addTo(myMap);
